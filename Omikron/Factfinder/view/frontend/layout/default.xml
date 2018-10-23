@@ -8,29 +8,31 @@
         <css src="Omikron_Factfinder::css/ff/suggest.css"/>
     </head>
 
-    <referenceContainer name="header.panel">
-        <block ifconfig="factfinder/general/is_enabled" class="Omikron\Factfinder\Block\FF\Communication" name="factfinder.communication" template="Omikron_Factfinder::ff/communication.phtml" cacheable="false" />
-    </referenceContainer>
+    <body>
+        <referenceContainer name="header.panel">
+            <block ifconfig="factfinder/general/is_enabled" class="Omikron\Factfinder\Block\FF\Communication" name="factfinder.communication" template="Omikron_Factfinder::ff/communication.phtml" cacheable="false" />
+        </referenceContainer>
 
-    <!-- init BlockClassManager -->
-    <referenceContainer name="header-wrapper">
-        <block ifconfig="factfinder/general/is_enabled" after="top.search" class="Omikron\Factfinder\Block\BlockClassManager" name="factfinder.top.search"/>
-    </referenceContainer>
+        <!-- init BlockClassManager -->
+        <referenceContainer name="header-wrapper">
+            <block ifconfig="factfinder/general/is_enabled" after="top.search" class="Omikron\Factfinder\Block\BlockClassManager" name="factfinder.top.search"/>
+        </referenceContainer>
 
-    <!-- Replace result/record list -->
-    <referenceBlock name="factfinder.top.search">
-        <action ifconfig="factfinder/general/is_enabled" method="setBlockSearchbox">
-            <argument name="block" xsi:type="string">Searchbox</argument>
-        </action>
-    </referenceBlock>
+        <!-- Replace result/record list -->
+        <referenceBlock name="factfinder.top.search">
+            <action ifconfig="factfinder/general/is_enabled" method="setBlockSearchbox">
+                <argument name="block" xsi:type="string">Searchbox</argument>
+            </action>
+        </referenceBlock>
 
-    <!-- Remove the search links from footer -->
-    <referenceBlock name="footer_links">
-        <action ifconfig="factfinder/general/is_enabled" method="unsetChild">
-            <argument name="block" xsi:type="string">catalog-search-advanced-link</argument>
-        </action>
-        <action ifconfig="factfinder/general/is_enabled" method="unsetChild">
-            <argument name="block" xsi:type="string">search-term-popular-link</argument>
-        </action>
-    </referenceBlock>
+        <!-- Remove the search links from footer -->
+        <referenceBlock name="footer_links">
+            <action ifconfig="factfinder/general/is_enabled" method="unsetChild">
+                <argument name="block" xsi:type="string">catalog-search-advanced-link</argument>
+            </action>
+            <action ifconfig="factfinder/general/is_enabled" method="unsetChild">
+                <argument name="block" xsi:type="string">search-term-popular-link</argument>
+            </action>
+        </referenceBlock>
+    </body>
 </page>

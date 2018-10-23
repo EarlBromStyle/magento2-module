@@ -228,7 +228,6 @@ class Product extends AbstractModel
             return $result;
         }
         $result = $this->uploadFeed($filename);
-        $this->deleteFeedFile($filename);
         if (isset($result['has_errors']) && $result['has_errors']) {
             return $result;
         }
