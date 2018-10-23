@@ -1,0 +1,17 @@
+{
+    "name": "brandung/factfinder-magento2",
+    "description": "FACTFinder Webcomponents Magento2 Integration",
+    "require": {
+        "php": "^7.0.0"
+    },
+    "type": "magento2-module",
+    "license": "",
+    "autoload": {
+        "files": [
+            "Omikron/Factfinder/registration.php"
+        ],
+        "psr-4": {
+            "Omikron\\Factfinder\\": "Omikron/Factfinder"
+        }
+    }
+}
