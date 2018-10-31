@@ -237,12 +237,16 @@
                     <frontend_model>Omikron\Factfinder\Block\Adminhtml\System\Config\Button\Feed</frontend_model>
                     <comment>On buttonclick CSV exports of all your products will be generated and uploaded to the specified FTP Server.</comment>
                 </field>
-                <field id="ff_cron_import" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="ff_feedlink" translate="label" sortOrder="110" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Check generated file</label>
+                    <frontend_model>Omikron\Factfinder\Block\Adminhtml\System\Links</frontend_model>
+                </field>
+                <field id="ff_cron_import" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Automatic Import of productdata</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Runs an automatic import of the product data to the FACT-Finder servers, after the FTP upload is finished.</comment>
                 </field>
-                <field id="ff_cron_enabled" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="ff_cron_enabled" translate="label" type="select" sortOrder="130" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Generate Export Files(s) automatically</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>If enabled, new export files will be created once daily at 1 a.m. system time.</comment>

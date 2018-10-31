@@ -1,0 +1,18 @@
+<?php
+/**
+ * links.phtml
+ *
+ * @copyright Copyright © 2018 Brandung GmbH & Co. KG. All rights reserved.
+ * @author    CGI <info.de@cgi.com>
+ */
+
+/** @var \Omikron\Factfinder\Block\Adminhtml\System\Links $block */
+?>
+<td class="value">
+    <?php foreach ($block->getDownloadLinks() as $id => $link): ?>
+        <p id="export-download-<?php echo $block->escapeHtmlAttr($id); ?>">
+            <strong><?php echo $block->escapeHtml($link['label']) ?>:</strong>
+            <a href="<?php echo $block->escapeUrl($link['url']) ?>"><?php echo $block->escapeUrl($link['url']) ?></a>
+        </p>
+    <?php endforeach; ?>
+</td>
