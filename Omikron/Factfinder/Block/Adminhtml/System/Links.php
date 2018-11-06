@@ -36,7 +36,7 @@ class Links extends \Magento\Config\Block\System\Config\Form\Field
         Context $context,
         Url $frontendUrl,
         StoreManagerInterface $storeManager,
-        NAming $naming
+        Naming $naming
     ) {
         parent::__construct($context);
         $this->frontendUrl = $frontendUrl;
