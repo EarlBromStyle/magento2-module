@@ -82,7 +82,7 @@ class Links extends \Magento\Config\Block\System\Config\Form\Field
         if (file_exists($filePath)) {
             return filemtime($filePath);
         } else {
-            return __('- file does not exist -');
+            return 0;
         }
     }
 }
